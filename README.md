@@ -32,6 +32,7 @@ This is a responsive **Weather App** project built using the **Visual Crossing W
 
 ## 🗂 Project Structure
 
+```text
 WeatherApp/
 │
 ├─ dist/ # Webpack build output
@@ -43,9 +44,10 @@ WeatherApp/
 │ └─ night-sky.jpg # Background image
 │
 ├─ package.json # Project metadata and scripts
-├─ package-lock.json  
+├─ package-lock.json
 ├─ webpack.config.cjs # Webpack configuration
 └─ .gitignore
+```
 
 ---
 
