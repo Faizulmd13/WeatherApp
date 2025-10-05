@@ -1,0 +1,166 @@
+/* --------------------------------------------------
+   Color Palette Variables
+   -------------------------------------------------- */
+:root {
+  --parchment: #f0ead2;
+  --tea-green: #dde5b6;
+  --olivine: #adc178;
+  --chamoisee: #a98467;
+  --umber: #6c584c;
+
+  --gradient-top-right: linear-gradient(
+    45deg,
+    var(--parchment),
+    var(--tea-green),
+    var(--olivine),
+    var(--chamoisee),
+    var(--umber)
+  );
+}
+
+/* --------------------------------------------------
+   Global Reset & Base Styles
+   -------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--parchment);
+  color: var(--umber);
+}
+
+/* --------------------------------------------------
+   Header
+   -------------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  background: var(--tea-green);
+  border-bottom: 2px solid var(--olivine);
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--umber);
+}
+
+#place-name {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--chamoisee);
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  background-color: var(--parchment);
+  color: var(--umber);
+}
+
+#place-name::placeholder {
+  color: var(--chamoisee);
+}
+
+/* --------------------------------------------------
+   Map Area
+   -------------------------------------------------- */
+#map {
+  flex: 1;
+  width: 100%;
+  background: var(--parchment);
+}
+
+/* --------------------------------------------------
+   Weather Info Pop-up
+   -------------------------------------------------- */
+.weather-info {
+  position: relative;
+  background: var(--tea-green);
+  color: var(--umber);
+  border: 2px solid var(--olivine);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  min-width: 180px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.weather-info h2 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.weather-info p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.delete-btn {
+  position: absolute; /* position relative to .weather-info */
+  top: 5px; /* distance from top of the div */
+  right: 5px; /* distance from right of the div */
+  background: var(--chamoisee);
+  color: var(--parchment);
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: var(--umber);
+}
+
+/* --------------------------------------------------
+   Footer
+   -------------------------------------------------- */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  background: var(--umber);
+  color: var(--parchment);
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.footer a {
+  color: var(--parchment);
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+}
+
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--parchment);
+  transition: width 0.3s ease;
+}
+
+.footer a:hover::after {
+  width: 100%;
+}
