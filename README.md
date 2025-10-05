@@ -41,7 +41,6 @@ WeatherApp/
 │ ├─ index.js # Entry JS file, handles map, weather, and UI
 │ ├─ template.html # HTML template for Webpack
 │ ├─ styles.css # Global styles
-│ └─ night-sky.jpg # Background image
 │
 ├─ package.json # Project metadata and scripts
 ├─ package-lock.json
